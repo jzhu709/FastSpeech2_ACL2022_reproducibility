@@ -2,10 +2,12 @@
 
 *This branch is for reproducing results from the ACL2022 paper*
 
+NOTE: Best to use Python 3.7 for installing dependencies. Also need to import PyTorch after loading all the DLL files.
+
 To synthesize:
 
 ```
-python3 synthesize.py --text "hello world, how are you?" --restore_step 200000 --mode single -p config/LJ_acl2022_paper/preprocess.yaml -m config/LJ_acl2022_paper/model.yaml -t config/LJ_acl2022_paper/train_15m.yaml
+python synthesize.py --text "hello world, how are you?" --restore_step 200000 --mode single -p config/LJ_acl2022_paper/preprocess.yaml -m config/LJ_acl2022_paper/model.yaml -t config/LJ_acl2022_paper/train_15m.yaml
 ```
 
 You can replace the training config `-t` with any of the options (15m, train_30m, train_1, etc...).
